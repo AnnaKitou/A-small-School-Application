@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="yourname_individual_part_a.Core.Entities.Assignment" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAQIAAgAAAAAIIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Core\Entities\Assignment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Course" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Students" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="yourname_individual_part_a.Core.Entities.Course" Collapsed="true">
+    <Position X="1" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAICAAAAAAgAAEAAAAAAEAAgAAAIAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Core\Entities\Course.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Assignments" />
+      <Property Name="Students" />
+      <Property Name="Trainers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="yourname_individual_part_a.Core.Entities.Student" Collapsed="true">
+    <Position X="4" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAQAEAAAAAAQAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Core\Entities\Student.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Courses" />
+      <Property Name="Assignments" />
+      <Property Name="Trainers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="yourname_individual_part_a.Core.Entities.Trainer" Collapsed="true">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Core\Entities\Trainer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Courses" />
+      <Property Name="Students" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

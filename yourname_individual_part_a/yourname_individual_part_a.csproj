@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80F9C8F9-75DE-4E54-992A-7B48FA7D98CC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>yourname_individual_part_a</RootNamespace>
+    <AssemblyName>yourname_individual_part_a</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\App.cs" />
+    <Compile Include="Controllers\AssignmentController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\TrainerController.cs" />
+    <Compile Include="Core\Entities\Assignment.cs" />
+    <Compile Include="Core\Entities\Course.cs" />
+    <Compile Include="Core\Entities\Person.cs" />
+    <Compile Include="Core\Entities\Student.cs" />
+    <Compile Include="Core\Entities\Trainer.cs" />
+    <Compile Include="Core\Enums\CourseType.cs" />
+    <Compile Include="Core\Enums\Stream.cs" />
+    <Compile Include="Core\Enums\Subject.cs" />
+    <Compile Include="Database\MyDataBase.cs" />
+    <Compile Include="Database\PairClasses\AssignmentStudent.cs" />
+    <Compile Include="Database\PairClasses\AssignmentStudentCourse.cs" />
+    <Compile Include="Database\PairClasses\CourseAssignment.cs" />
+    <Compile Include="Database\PairClasses\CourseStudent.cs" />
+    <Compile Include="Database\PairClasses\CourseTrainer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryService\AssignmentRepository.cs" />
+    <Compile Include="RepositoryService\CourseRepository.cs" />
+    <Compile Include="RepositoryService\StudentRepository.cs" />
+    <Compile Include="RepositoryService\TrainerRepository.cs" />
+    <Compile Include="View\Helpers\HelperClass.cs" />
+    <Compile Include="View\Helpers\HelperClassDateTime.cs" />
+    <Compile Include="View\Helpers\HelperClassEnum.cs" />
+    <Compile Include="View\Helpers\HelperClassNumber.cs" />
+    <Compile Include="View\Helpers\HelperClassText.cs" />
+    <Compile Include="View\ViewAssignments\CreateAssignments.cs" />
+    <Compile Include="View\ViewAssignments\ViewAssignment.cs" />
+    <Compile Include="View\ViewCourses\CreateCourses.cs" />
+    <Compile Include="View\ViewCourses\ViewCourse.cs" />
+    <Compile Include="View\ViewStudents\CreateStudents.cs" />
+    <Compile Include="View\ViewStudents\ViewStudent.cs" />
+    <Compile Include="View\ViewTrainers\CreateTrainers.cs" />
+    <Compile Include="View\ViewTrainers\ViewTrainer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
